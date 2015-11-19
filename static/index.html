@@ -23,241 +23,248 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#top"  onclick = $("#menu-close").click(); >Matthew Squire</a>
-            </li>
-            <li>
-                <a href="#top" onclick = $("#menu-close").click(); >Home</a>
-            </li>
-            <li>
-                <a href="#about" onclick = $("#menu-close").click(); >About</a>
-            </li>
-            <li>
-                <a href="#services" onclick = $("#menu-close").click(); >Services</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
-            </li>
-            <li>
-                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
-            </li>
-        </ul>
-    </nav>
+<!-- Navigation -->
+<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+        <li class="sidebar-brand">
+            <a href="#top"  onclick = $("#menu-close").click(); >Matthew Squire</a>
+        </li>
+        <li>
+            <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+        </li>
+        <li>
+            <a href="#about" onclick = $("#menu-close").click(); >About</a>
+        </li>
+        <li>
+            <a href="#services" onclick = $("#menu-close").click(); >Services</a>
+        </li>
+        <li>
+            <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+        </li>
+        <li>
+            <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
+        </li>
+    </ul>
+</nav>
 
-    <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <div class=" col-lg-offset-3 col-md-offset-6">
-                <div class="row">
-                    <div class="col-lg-3 col-md-3">
-                        <img src="img/headshot.jpg" class="img-responsive img-circle" alt="An image of Matthew Squire">
-                    </div>
-                    <div class="col-lg-6 col-md-9">
-                        <br/>
-                        <h1>Matthew Squire</h1>
-                        <h2><strong>Software Developer</strong></h2>
-                        <br/>
-                        <a href="#about" class="btn btn-dark btn-lg"><strong>Find Out More</strong></a>
-                    </div>
+<!-- Header -->
+<header id="top" class="header">
+    <div class="text-vertical-center">
+        <div class=" col-lg-offset-3 col-md-offset-6">
+            <div class="row hidden-md">
+                <div class="hidden-lg">
+                    <img height="200" width="200" src="img/headshot.jpg" class="center-block img-responsive img-circle" alt="An image of Matthew Squire">
                 </div>
             </div>
-        </div>
-    </header>
-
-    <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>My portfolio</h2>
-                    <p class="lead">As a trained Mathematician I am capable of seeing things in a different light than most developers.</p>
+                <div class="col-lg-3 col-md-3 visible-lg">
+                    <img src="img/headshot.jpg" class="img-responsive img-circle" alt="An image of Matthew Squire">
+                </div>
+                <div class="col-lg-6 col-md-9">
+                    <br/>
+                    <h1>Matthew Squire</h1>
+                    <h2><strong>Software Developer</strong></h2>
+                    <br/>
+                    <a href="#about" class="btn btn-dark btn-lg"><strong>Find Out More</strong></a>
                 </div>
             </div>
-            <!-- /.row -->
         </div>
-        <!-- /.container -->
-    </section>
+    </div>
+</header>
 
-    <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>My services</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
+<!-- About -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>My portfolio</h2>
+                <p class="lead">As a trained Mathematician I am capable of seeing things in a different light than most developers.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Services -->
+<!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+<section id="services" class="services bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>My services</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-compass fa-stack-1x text-primary"></i>
                             </span>
-                                <h4>
-                                    <strong>Android Development</strong>
-                                </h4>
-                                <p>Since owning my first droid in 2003 I have been developing for the Android platform. I have several apps on the market.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
+                            <h4>
+                                <strong>Android Development</strong>
+                            </h4>
+                            <p>Since owning my first droid in 2003 I have been developing for the Android platform. I have several apps on the market.</p>
+                            <a href="#" class="btn btn-light">Learn More</a>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-cloud fa-stack-1x text-primary"></i>
                             </span>
-                                <h4>
-                                    <strong>Google App Engine</strong>
-                                </h4>
-                                <p>I can use googles advanced cloud based hosting service to build or maintain your next website and support your transition</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
+                            <h4>
+                                <strong>Google App Engine</strong>
+                            </h4>
+                            <p>I can use googles advanced cloud based hosting service to build or maintain your next website and support your transition</p>
+                            <a href="#" class="btn btn-light">Learn More</a>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-flask fa-stack-1x text-primary"></i>
                             </span>
-                                <h4>
-                                    <strong>Java Development</strong>
-                                </h4>
-                                <p>I specialize in Java based systems. I am an Oracle Certified Developer. With an online education in Computer Science topics.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
+                            <h4>
+                                <strong>Java Development</strong>
+                            </h4>
+                            <p>I specialize in Java based systems. I am an Oracle Certified Developer. With an online education in Computer Science topics.</p>
+                            <a href="#" class="btn btn-light">Learn More</a>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-shield fa-stack-1x text-primary"></i>
                             </span>
-                                <h4>
-                                    <strong>Web Design</strong>
-                                </h4>
-                                <p>I can design web templates to meet your needs, to your specification. I can ensure a quality product is released to your customers.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
+                            <h4>
+                                <strong>Web Design</strong>
+                            </h4>
+                            <p>I can design web templates to meet your needs, to your specification. I can ensure a quality product is released to your customers.</p>
+                            <a href="#" class="btn btn-light">Learn More</a>
                         </div>
                     </div>
-                    <!-- /.row (nested) -->
                 </div>
-                <!-- /.col-lg-10 -->
+                <!-- /.row (nested) -->
             </div>
-            <!-- /.row -->
+            <!-- /.col-lg-10 -->
         </div>
-        <!-- /.container -->
-    </section>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
 
-     <!--Callout -->
-    <!--<aside class="callout">-->
-        <!--<div class="text-vertical-center">-->
-            <!--<h1>Vertically Centered Text</h1>-->
-        <!--</div>-->
-    <!--</aside>-->
+<!--Callout -->
+<!--<aside class="callout">-->
+<!--<div class="text-vertical-center">-->
+<!--<h1>Vertically Centered Text</h1>-->
+<!--</div>-->
+<!--</aside>-->
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>My Work</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-6 fa-border">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/stayalert.png">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
-                            </div>
+<!-- Portfolio -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h2>My Work</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-6 fa-border">
+                        <div class="portfolio-item">
+                            <a href="#">
+                                <img class="img-portfolio img-responsive" src="img/stayalert.png" alt="A screen shot of MCNStayAlert.com">
+                            </a>
                         </div>
                     </div>
-                    <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <a href="#">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <!-- /.col-lg-10 -->
+                <!-- /.row (nested) -->
+                <a href="#" class="btn btn-dark">View More Items</a>
             </div>
-            <!-- /.row -->
+            <!-- /.col-lg-10 -->
         </div>
-        <!-- /.container -->
-    </section>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
 
-    <!-- Call to Action -->
-    <aside class="call-to-action bg-primary">
-        <div class="container">
-            <div class="row">
-            </div>
-            <!-- /.row -->
+<!-- Call to Action -->
+<aside class="call-to-action bg-primary">
+    <div class="container">
+        <div class="row">
         </div>
-    </aside>
+        <!-- /.row -->
+    </div>
+</aside>
 
-    <!-- Map -->
-    <section id="contact" class="map">
-<iframe class="center-block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196281.12937326418!2d-104.99519443761409!3d39.76451867242302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver%2C+CO!5e0!3m2!1sen!2sus!4v1447795820469" width="1080" height="600" frameborder="0" style="border:0" allowfullscreen>
+<!-- Map -->
+<section id="contact" class="map">
+    <div class="embed-responsive embed-responsive-16by9 col-xs-8 col-xs-offset-2">
+    <iframe class="embed-responsive-item center-block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196281.12937326418!2d-104.99519443761409!3d39.76451867242302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver%2C+CO!5e0!3m2!1sen!2sus!4v1447795820469" width="1080" height="600" frameborder="0" style="border:0" allowfullscreen>
         <small>
             <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196281.12937326418!2d-104.99519443761409!3d39.76451867242302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver%2C+CO!5e0!3m2!1sen!2sus!4v1447795820469"></a>
         </small>
-</iframe>
-    </section>
+    </iframe>
+        </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Connect With Me</strong>
-                    </h4>
-                    <p>Broomfield, Co<br>80021</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">Matt@mhsquire.com</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="https://www.facebook.com/matthew.squire.73"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/CipherKit"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/matthew-squire-a3535a59"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; MHSquire.com 2015</p>
-                </div>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h4><strong>Connect With Me</strong>
+                </h4>
+                <p>Broomfield, Co<br>80021</p>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">Matt@mhsquire.com</a>
+                    </li>
+                </ul>
+                <br>
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://www.facebook.com/matthew.squire.73"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/CipherKit"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/matthew-squire-a3535a59"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
+                    </li>
+                </ul>
+                <hr class="small">
+                <p class="text-muted">Copyright &copy; MHSquire.com 2015</p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script>
+<!-- Custom Theme JavaScript -->
+<script>
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
         e.preventDefault();
@@ -286,7 +293,7 @@
             }
         });
     });
-    </script>
+</script>
 
 </body>
 
