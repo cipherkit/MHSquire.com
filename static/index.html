@@ -28,7 +28,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body >
 
 <!-- Navigation -->
 <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
@@ -265,6 +265,37 @@
 
 <!-- Custom Theme JavaScript -->
 <script>
+
+    //Borrowed interval function that performs better than setInterval
+    function interval(func, wait, times){
+    var interv = function(w, t){
+        return function(){
+            if(typeof t === "undefined" || t-- > 0){
+                setTimeout(interv, w);
+                try{
+                    func.call(null);
+                }
+                catch(e){
+                    t = 0;
+                    throw e.toString();
+                }
+            }
+        };
+    }(wait, times);
+
+    setTimeout(interv, wait);
+};
+
+    //highlights sidebar toggle
+    var sandwhich = document.getElementById('menu-toggle')
+    interval(function(){
+        if (sandwhich.style.visibility == 'visible') {
+            sandwhich.style.visibility = 'hidden';
+        } else {
+            sandwhich.style.visibility = 'visible';
+        }
+    }, 300, 9);
+
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
         e.preventDefault();
