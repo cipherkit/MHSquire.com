@@ -1,16 +1,15 @@
 # [START imports]
 import os
-import urllib
-
-from google.appengine.api import users
-from google.appengine.ext import ndb
-
-from models.Greeting import Greeting
 
 import jinja2
-import webapp2
 import settings
-
+import os
+import urllib
+from google.appengine.api import users
+from google.appengine.ext import ndb
+from models.Greeting import Greeting
+from models.Author import Author
+import webapp2
 
 DEFAULT_GUESTBOOK_NAME = 'default_guestbook'
 # We set a parent key on the 'Greetings' to ensure that they are all
@@ -36,7 +35,7 @@ class GuestLanding(webapp2.RequestHandler):
 
     baseLink = {'link': '/', 'label': 'Home'}
 
-    def get(self):
+    def get(self, request=webapp2.RequestHandler):
         guestbook_name = self.request.get('guestbook_name',
                                           DEFAULT_GUESTBOOK_NAME)
         greetings_query = Greeting.query(
@@ -59,8 +58,29 @@ class GuestLanding(webapp2.RequestHandler):
             'url_linktext': url_linktext,
         }
         # _link = baselink[link] +
-        _resp = JINJA_ENVIRONMENT.get_template('guestbook.html')
+        _resp = JINJA_ENVIRONMENT.get_template('static/guestbook.html')
         self.response.write(_resp.render(context))
+
+    def post(self, request=webapp2.RequestHandler):
+        # We set the same parent key on the 'Greeting' to ensure each
+        # Greeting is in the same entity group. Queries across the
+        # single entity group will be consistent. However, the write
+        # rate to a single entity group should be limited to
+        # ~1/second.
+        guestbook_name = self.request.get('guestbook_name', get_guestbook_key())
+
+        greeting = Greeting(parent=guestbook_key(guestbook_name))
+
+        if users.get_current_user():
+            greeting.author = Author(
+                    identity=users.get_current_user().user_id(),
+                    email=users.get_current_user().email())
+
+        greeting.content = self.request.get('content')
+        greeting.put()
+        query_params = {'guestbook_name': guestbook_name}
+        self.redirect('/guestbook/sign?' + urllib.urlencode(query_params))
+
 
 # [END main_page]
 
