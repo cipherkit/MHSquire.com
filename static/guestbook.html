@@ -1,40 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-  <div class="container"></div>
 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="Matthew Squire" content="">
+
+  <title>Matthew Squire</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/stylish-portfolio.css" type="text/css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
+
 <body>
 <div class="container">
   <div class="heading"><h1>MHSquire.com</h1></div>
-  {% for greeting in greetings %}
-  {% if greeting.author %}
-  <b>{{ greeting.author.email }}
-    {% if user and user.user_id() == greeting.author.identity %}
-    (You)
-    {% endif %}
-  </b> wrote:
-  {% else %}
-  An anonymous person wrote:
-  {% endif %}
-  <blockquote>{{ greeting.content }}</blockquote>
-  {% endfor %}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Messages from friends.
+    </div>
+    <table class="table table-striped">
+      {% for greeting in greetings %}
+      <tr>
+        <td>
+          {% if greeting.author %}
+          <strong>{{ greeting.author.email }}
+            {% if user and user.user_id() == greeting.author.identity %}
+            (You)
+            {% endif %}
+          </strong> wrote:
+          {% else %}
+          An anonymous person wrote:
+          {% endif %}
+          <blockquote>{{ greeting.content }}</blockquote>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
 
   <form action="/sign?guestbook_name={{ guestbook_name }}" method="post">
-    <div><textarea name="content" rows="3" cols="60"></textarea></div>
-    <div><input type="submit" value="Sign Guestbook"></div>
+    <div class="form-group">
+      <div><textarea class="form-control" name="content" rows="3" cols="60"></textarea></div>
+      <div><input class="btn btn-dark" type="submit" value="Sign Guestbook"></div>
+    </div>
   </form>
 
   <hr>
 
-  <form>Guestbook name:
-    <input value="{{ guestbook_name }}" name="guestbook_name">
-    <input type="submit" value="switch">
+  <form>
+    <label>
+      Guestbook name:
+    </label>
+    <div class="form-group">
+      <input class="form-control" value="{{ guestbook_name }}" name="guestbook_name">
+      <input class="btn btn-dark" type="submit" value="switch">
+    </div>
   </form>
 
   <a href="{{ url|safe }}">{{ url_linktext }}</a>
+  <div class="footer">
+  </div>
+  <!--footer-->
 </div>
 <!--container-->
 </body>

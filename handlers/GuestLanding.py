@@ -77,6 +77,7 @@ class GuestLanding(webapp2.RequestHandler):
                     email=users.get_current_user().email())
 
         greeting.content = self.request.get('content')
+
         greeting.put()
         query_params = {'guestbook_name': guestbook_name}
         self.redirect('/guestbook/sign?' + urllib.urlencode(query_params))
