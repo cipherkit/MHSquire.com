@@ -80,7 +80,7 @@ class GuestLanding(webapp2.RequestHandler):
 
         greeting.put()
         query_params = {'guestbook_name': guestbook_name}
-        self.redirect('/guestbook/sign?' + urllib.urlencode(query_params))
+        self.redirect('/sign?' + urllib.urlencode(query_params))
 
 
 # [END main_page]
