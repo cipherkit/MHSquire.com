@@ -14,6 +14,7 @@ import handlers
 
 application = webapp2.WSGIApplication([
     ('/', handlers.Main),
+    (r'\/admin.*', handlers.admin),
     (r'\/guestbook.*', handlers.GuestLanding),
     (r'(\/sign.*)', handlers.GuestLanding),
     ], debug=True)
