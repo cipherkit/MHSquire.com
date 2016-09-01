@@ -1,5 +1,3 @@
-__author__ = 'owner'
+__author__ = 'mhsquire'
 
-from .GuestLanding import GuestLanding
-from .Guestbook import Guestbook
 from .Main import Main
